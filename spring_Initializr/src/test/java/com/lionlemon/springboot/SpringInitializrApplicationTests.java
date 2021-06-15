@@ -1,4 +1,4 @@
-package com.lionlemon.springboot.spring_initializr;
+package com.lionlemon.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
