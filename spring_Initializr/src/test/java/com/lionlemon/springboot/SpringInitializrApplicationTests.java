@@ -1,7 +1,6 @@
 package com.lionlemon.springboot;
 
-import com.lionlemon.exception.ExceptionType;
-import com.lionlemon.exception.ServiceException;
+
 import com.lionlemon.pojo.Person;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ class SpringInitializrApplicationTests {
     private Person person;
 //    private Dog dog;
     @Test
-    void contextLoads() throws ServiceException {
+    void contextLoads(){
 //        System.out.println(dog);
 
             System.out.println(person);
