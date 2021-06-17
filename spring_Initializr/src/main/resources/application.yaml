@@ -25,5 +25,7 @@ person :
   dog:
     name: ${person.dogname:xiao}bai
     age: 5
-
-
+#指定配置文件
+spring:
+  profiles:
+    active: dev
