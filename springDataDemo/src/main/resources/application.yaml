@@ -4,3 +4,4 @@ spring:
     password: admin
     url: jdbc:mysql://localhost:3306/db1?useUnicode=true&charachterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource

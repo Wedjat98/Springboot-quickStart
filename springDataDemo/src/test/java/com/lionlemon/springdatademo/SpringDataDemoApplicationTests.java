@@ -15,7 +15,7 @@ class SpringDataDemoApplicationTests {
     @Test
     void contextLoads() throws SQLException {
         Connection dataSourceConnection = dataSource.getConnection();
-
+        System.out.println(dataSource.getClass());
         System.out.println(dataSourceConnection);
         dataSourceConnection.close();
     }
