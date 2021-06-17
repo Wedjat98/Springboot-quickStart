@@ -11,6 +11,6 @@ public class HelloController {
     //hello/boot
     @GetMapping("boot")
     public String SayHi(){
-        return "<h1>hello spring boot~~~~</h1>";
+        return "<h1>hello spring boot！！！！~~~~</h1>";
     }
 }

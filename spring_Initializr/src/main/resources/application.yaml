@@ -1,0 +1,23 @@
+#yaml还可以注入到配置类
+
+#存储对象
+studen1:
+  name: xiaozhuzhu
+  age: 12
+student2: {name: haozhuzhu,age: 3}
+#数组
+pets1 :
+  - cat
+  - dog
+pets2 : [pig1,pig2]
+
+person :
+  name: xiaozhuzhu
+  age: 3
+  isHappy: true
+  birth: 2000/1/1
+  maps: {k1: v1,k2: v2}
+  lists: [code,happy,eat]
+dog: {name: gou,age: 5}
+
+
