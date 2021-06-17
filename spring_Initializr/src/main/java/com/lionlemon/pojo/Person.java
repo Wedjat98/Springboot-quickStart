@@ -1,5 +1,6 @@
 package com.lionlemon.pojo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -8,21 +9,22 @@ import java.util.List;
 import java.util.Map;
 
 @Component
-@ConfigurationProperties(prefix = "person")
+@ConfigurationProperties(prefix = "person")//指定yaml中对应的部分
 public class Person {
     private String name;
     private Integer age;
+    @Value("true")
     private Boolean isHappy;
     private Date birth;
     private Map<String,Object> maps;
     private List<Object> list;
     private Dog dog;
-    private Cat cat;
+
 
     public Person() {
     }
 
-    public Person(String name, Integer age, Boolean isHappy, Date birth, Map<String, Object> maps, List<Object> list, Dog dog, Cat cat) {
+    public Person(String name, Integer age, Boolean isHappy, Date birth, Map<String, Object> maps, List<Object> list, Dog dog) {
         this.name = name;
         this.age = age;
         this.isHappy = isHappy;
@@ -30,7 +32,6 @@ public class Person {
         this.maps = maps;
         this.list = list;
         this.dog = dog;
-        this.cat = cat;
     }
 
     public String getName() {
@@ -89,13 +90,7 @@ public class Person {
         this.dog = dog;
     }
 
-    public Cat getCat() {
-        return cat;
-    }
 
-    public void setCat(Cat cat) {
-        this.cat = cat;
-    }
 
     @Override
     public String toString() {
@@ -107,7 +102,6 @@ public class Person {
                 ", maps=" + maps +
                 ", list=" + list +
                 ", dog=" + dog +
-                ", cat=" + cat +
                 '}';
     }
 }

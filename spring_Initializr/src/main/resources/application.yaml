@@ -12,12 +12,18 @@ pets1 :
 pets2 : [pig1,pig2]
 
 person :
-  name: xiaozhuzhu
-  age: 3
-  isHappy: true
+  name: xiaozhuzhu${random.uuid}
+  age: ${random.int}
+  isHappy: false
   birth: 2000/1/1
   maps: {k1: v1,k2: v2}
-  lists: [code,happy,eat]
-dog: {name: gou,age: 5}
+  dogname: xiaoxiao
+  list:
+    - code
+    - happy
+    - eat
+  dog:
+    name: ${person.dogname:xiao}bai
+    age: 5
 
 
