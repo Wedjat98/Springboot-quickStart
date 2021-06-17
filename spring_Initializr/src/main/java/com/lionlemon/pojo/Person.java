@@ -7,13 +7,14 @@ import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 @Validated
 @Component
 @ConfigurationProperties(prefix = "person")//指定yaml中对应的部分
-public class Person {
+public class Person implements Serializable {
     private String name;
     @Max(value = 150,message = "年龄不合法")
     @Min(value = 0,message = "年龄不能小于0")
