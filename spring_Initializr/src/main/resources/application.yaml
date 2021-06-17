@@ -13,7 +13,7 @@ pets2 : [pig1,pig2]
 
 person :
   name: xiaozhuzhu${random.uuid}
-  age: -111
+  age: 111
   isHappy: false
   birth: 2000/1/1
   maps: {k1: v1,k2: v2}
