@@ -3,15 +3,20 @@ package com.lionlemon.pojo;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-
+@Validated
 @Component
 @ConfigurationProperties(prefix = "person")//指定yaml中对应的部分
 public class Person {
     private String name;
+    @Max(value = 150,message = "年龄不合法")
+    @Min(value = 0,message = "年龄不能小于0")
     private Integer age;
     @Value("true")
     private Boolean isHappy;
